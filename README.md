@@ -2,7 +2,15 @@
 
 This repository holds **documentation** on `main`, plus **Velopack build outputs** under **`lfs/<semver>/`** when maintainers run **`scripts/Publish-VelopackToHomeSetupLfs.ps1`** (those binaries use **Git LFS**).
 
-**GitHub limits:** LFS blobs on Free/Pro must be **under 2 GiB** each. Full **Setup.exe** / **full.nupkg** are often larger; they may be skipped for LFS with a warning—use **GitHub Releases** (same limit per asset), **Team/Enterprise** (higher caps), or **external hosting** for the primary installer.
+**GitHub limits:** LFS blobs on Free/Pro must be **under 2 GiB** each. Full **Setup.exe** / **full.nupkg** are often larger; they may be skipped for LFS with a warning—use **GitHub Releases** (same limit per asset), **Team/Enterprise** (higher caps), or the **Promethos mirror** below for the primary installer.
+
+## Full installer (large files — Promethos mirror)
+
+**Official large-artifact download base (rsync.net):** **https://zh5605.rsync.net/promethos/**
+
+Browse to **`/<semver>/`** under that path (for example **`https://zh5605.rsync.net/promethos/1.0.15/`**) for **`com.promethos.ember.setup-win-Setup.exe`**, **`com.promethos.ember.setup-win-Portable.zip`**, and **`com.promethos.ember.setup-<semver>-full.nupkg`** when published by maintainers (`ember/scripts/Publish-VelopackLargeFilesToPromethosMirror.ps1`).
+
+**HTTP login for the mirror** (browser or `curl`): see **[VELOPACK_INSTALLER_DOWNLOAD.md](VELOPACK_INSTALLER_DOWNLOAD.md)** — use your **rsync.net** account name and **HTTPS password** from the control panel; **do not** put real secrets in git.
 
 ## Single installable app
 
