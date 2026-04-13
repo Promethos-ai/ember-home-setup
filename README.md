@@ -1,6 +1,8 @@
 # Ember Home Setup (installers)
 
-This repository holds **documentation only**. The installable **Windows application** is published under **GitHub Releases** (not in the `main` branch tree).
+This repository holds **documentation** on `main`, plus **Velopack build outputs** under **`lfs/<semver>/`** when maintainers run **`scripts/Publish-VelopackToHomeSetupLfs.ps1`** (those binaries use **Git LFS**).
+
+**GitHub limits:** LFS blobs on Free/Pro must be **under 2 GiB** each. Full **Setup.exe** / **full.nupkg** are often larger; they may be skipped for LFS with a warning—use **GitHub Releases** (same limit per asset), **Team/Enterprise** (higher caps), or **external hosting** for the primary installer.
 
 ## Single installable app
 
@@ -34,6 +36,20 @@ From **`ember`**:
 ```
 
 Requires **Git**, **GitHub CLI** (`gh`) authenticated. Adjust **`-GithubRepo`** if your org/repo name differs.
+
+### Git LFS (Velopack files on `main`)
+
+Install [Git LFS](https://git-lfs.com) and run `git lfs install`, then:
+
+```powershell
+.\scripts\Publish-VelopackToHomeSetupLfs.ps1 -Version "v1.0.8"
+```
+
+Or combine with the doc push:
+
+```powershell
+.\publish-ember-home-setup-release.ps1 -Version "v1.0.8" -AlsoPushLfsArtifacts
+```
 
 ## Related documentation
 
