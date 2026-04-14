@@ -8,7 +8,7 @@ This repository holds **documentation** on `main`, plus **Velopack build outputs
 
 **Official large-artifact download base (rsync.net):** **https://zh5605.rsync.net/promethos/**
 
-Browse to **`/<semver>/`** under that path (for example **`https://zh5605.rsync.net/promethos/1.0.15/`**) for **`com.promethos.ember.setup-win-Setup.exe`**, **`com.promethos.ember.setup-win-Portable.zip`**, and **`com.promethos.ember.setup-<semver>-full.nupkg`** when published by maintainers (`ember/scripts/Publish-VelopackLargeFilesToPromethosMirror.ps1`).
+Browse to **`/<semver>/`** under that path (for example **`https://zh5605.rsync.net/promethos/1.0.17/`**) for **`com.promethos.ember.setup-win-Setup.exe`**, **`com.promethos.ember.setup-win-Portable.zip`**, and **`com.promethos.ember.setup-<semver>-full.nupkg`** when published by maintainers (`ember/scripts/Publish-VelopackLargeFilesToPromethosMirror.ps1`).
 
 **HTTP login for the mirror** (browser or `curl`): see **[VELOPACK_INSTALLER_DOWNLOAD.md](VELOPACK_INSTALLER_DOWNLOAD.md)** — use your **rsync.net** account name and **HTTPS password** from the control panel; **do not** put real secrets in git.
 
@@ -40,7 +40,7 @@ Outputs Velopack artifacts under `windows-installer\electron-setup\Releases\`.
 From **`ember`**:
 
 ```powershell
-.\publish-ember-home-setup-release.ps1 -Version "v1.0.8" -CreateRepo
+.\publish-ember-home-setup-release.ps1 -Version "v1.0.17" -CreateRepo
 ```
 
 Requires **Git**, **GitHub CLI** (`gh`) authenticated. Adjust **`-GithubRepo`** if your org/repo name differs.
@@ -50,13 +50,13 @@ Requires **Git**, **GitHub CLI** (`gh`) authenticated. Adjust **`-GithubRepo`** 
 Install [Git LFS](https://git-lfs.com) and run `git lfs install`, then:
 
 ```powershell
-.\scripts\Publish-VelopackToHomeSetupLfs.ps1 -Version "v1.0.8"
+.\scripts\Publish-VelopackToHomeSetupLfs.ps1 -Version "v1.0.17"
 ```
 
 Or combine with the doc push:
 
 ```powershell
-.\publish-ember-home-setup-release.ps1 -Version "v1.0.8" -AlsoPushLfsArtifacts
+.\publish-ember-home-setup-release.ps1 -Version "v1.0.17" -AlsoPushLfsArtifacts
 ```
 
 ## Related documentation
